@@ -9,7 +9,7 @@ const Icon = ({ name, styleClass }) => {
     if (name === "faBars" ? name = faBars : null);
 
     return (
-        <FontAwesomeIcon className={`text-primary-black ${styleClass}`} icon={name} size="xl" />
+        <FontAwesomeIcon className={`text-primary-black ${styleClass} hover:text-neutral-400 cursor-pointer active:text-neutral-600`} icon={name} size="xl" />
     )
 }
 

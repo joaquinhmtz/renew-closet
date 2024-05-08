@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Icon from "../../shared/components/Icon"
 
-const icons = ["faCircleUser", "faHeart", "faBagShopping"];
+const icons = [{
+    icon:"faCircleUser",
+    path:"/"
+}, {
+    icon:"faHeart",
+    path: "/",
+}, {
+    icon:"faBagShopping",
+    path: "/bolsa"
+}];
 
 const PublicHeader = () => {
     
@@ -23,8 +33,10 @@ const PublicHeader = () => {
                     <span className="text-2xl font-semibold invisible lg:visible">Renew-Closet</span>
                 </div>
                 <div className="flex space-x-8">
-                    {icons.map(icon => 
-                        <Icon key={icon} name={icon} styleClass={""}/>
+                    {icons.map(iconObj => 
+                        <Link to={iconObj.path} key={iconObj.icon}>
+                            <Icon name={iconObj.icon} styleClass={""}/>
+                        </Link>
                     )}
                 </div>
             </nav>

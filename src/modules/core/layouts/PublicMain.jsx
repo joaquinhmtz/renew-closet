@@ -5,13 +5,15 @@ import PublicFooter from "../components/PublicFooter"
 
 const PublicMain = () => {
     return (
-        <>
-            <PublicHeader />
-            <div>Soy el public main</div>
+        <> 
+            <main className="h-screen">
+                <PublicHeader />
+                <div className="mt-20">Soy el public main</div>
 
-            <Outlet />
+                <Outlet />
 
-            <PublicFooter />
+                <PublicFooter />
+            </main>
         </>
     )
 }

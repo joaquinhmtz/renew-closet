@@ -1,4 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
+  /* Variables */
+  --colorPrimaryBlack: #020617;
+  --colorGray: #6B7280;
+}
+
+.text-primary-black {
+  color: var(--colorPrimaryBlack);
+}
+
+.text-secondary-gray {
+  color: var(--colorGray);
+}
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +82,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

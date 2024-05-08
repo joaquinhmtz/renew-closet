@@ -18,7 +18,7 @@ const PublicHeader = () => {
     return (
         <>
             <nav className={`w-full fixed top-0 z-20 transition-all ${!top && `bg-white shadow-lg`} h-20 py-5 px-10 flex place-items-center justify-between text-primary-black`}>
-                <div>
+                <div className="flex place-items-center">
                     <Icon key={"faBars"} name={"faBars"} styleClass={"lg:hidden"}/>
                     <span className="text-2xl font-semibold invisible lg:visible">Renew-Closet</span>
                 </div>

@@ -62,12 +62,12 @@ const PublicHeader = () => {
                     </button>
                     <nav>
                         <ul className="flex flex-col pt-4 text-gray-800">
-                            <li className="w-full px-4 py-4 flex place-items-center hover:bg-gray-100 hover:rounded-md hover:font-medium active:bg-gray-200 cursor-pointer">
+                            <li className="w-full px-4 py-4 flex place-items-center hover:bg-gray-100 focus:ring-blue-300 hover:rounded-md hover:font-medium cursor-pointer">
                                 <Link to="/">
                                     <Icon name={"faHouse"} styleClass={"pr-2"}/> Home
                                 </Link>
                             </li>
-                            <li className="w-full px-4 py-4 flex place-items-center hover:bg-gray-100 hover:rounded-md hover:font-medium active:bg-gray-200 cursor-pointer">
+                            <li className="w-full px-4 py-4 flex place-items-center hover:bg-gray-100 hover:rounded-md hover:font-medium cursor-pointer">
                                 <Link to="/">
                                     <Icon name={"faHouse"} styleClass={"pr-2"}/> About
                                 </Link>

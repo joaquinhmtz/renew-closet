@@ -11,7 +11,7 @@ const Icon = ({ name, styleClass }) => {
     if (name === "faHouse" ? name = faHouse : null);
 
     return (
-        <FontAwesomeIcon className={`text-primary-black ${styleClass} hover:text-neutral-400 cursor-pointer active:text-neutral-600`} icon={name} size="xl" />
+        <FontAwesomeIcon className={`text-primary-black ${styleClass} hover:text-neutral-400 cursor-pointer active:scale-110`} icon={name} size="xl" />
     )
 }
 

@@ -4,7 +4,8 @@
 
 :root {
   /* Variables */
-  --colorPrimaryBlack: #020617;
+  /* --colorPrimaryBlack: #020617; */
+  --colorPrimaryBlack: #253237;
   --colorGray: #6B7280;
   --colorHoverGray: #EFF2F4;
 }

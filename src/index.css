@@ -8,6 +8,15 @@
   --colorPrimaryBlack: #253237;
   --colorGray: #6B7280;
   --colorHoverGray: #EFF2F4;
+  --colorBabyGreen: #DDF7EC;
+  --colorGreen: #0B9F6E;
+  --colorGranGreen: #087453;
+  --colorBabyAmber: #FEEFD6;
+  --colorAmber: #B86D2A;
+  --colorGranAmber: #AA5924;
+  --colorBabyBlue: #C2E0FB;
+  --colorBlue: #2F76E1;
+  --colorGrandBlue: #245AC1;
 }
 
 .text-primary-black {
@@ -17,6 +26,51 @@
 .text-secondary-gray {
   color: var(--colorGray);
 }
+
+.text-baby-green {
+  color: var(--colorBabyGreen);
+}
+
+.text-green {
+  color: var(--colorGreen);
+}
+
+.text-grand-green {
+  color: var(--colorGranGreen);
+}
+
+.text-baby-green {
+  color: var(--colorBabyGreen);
+}
+
+.bg-baby-green {
+  background-color: var(--colorBabyGreen);
+}
+
+.bg-baby-amber {
+  background-color: var(--colorBabyAmber);
+}
+
+.text-amber {
+  color: var(--colorAmber);
+}
+
+.text-grand-amber {
+  color: var(--colorGranAmber);
+}
+
+.bg-baby-blue {
+  background-color: var(--colorBabyBlue);
+}
+
+.text-blue {
+  color: var(--colorBlue);
+}
+
+.text-grand-blue {
+  color: var(--colorGrandBlue);
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

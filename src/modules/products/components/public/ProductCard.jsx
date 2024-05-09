@@ -2,7 +2,16 @@ import StatusTag from "../../../shared/components/StatusTag";
 import imgProduct from "./../../../../assets/t-shirt.png";
 
 const ProductCard = ({ props }) => {
-    console.log("props**", props);
+
+    let colors = {};
+
+    if (props.status === "available") {
+        colors = { "text": "text-green", "bg" : "bg-baby-green", "circle" : "text-grand-green" };
+    } else if (props.status === "almost_yours") {
+        colors = { "text": "text-blue", "bg" : "bg-baby-blue", "circle" : "text-grand-blue" };
+    } if (props.status === "separate") {
+        colors = { "text": "text-amber", "bg" : "bg-baby-amber", "circle" : "text-grand-amber" };
+    }
 
     return (
         <>
@@ -12,7 +21,7 @@ const ProductCard = ({ props }) => {
                 </div>
                 <div className="mt-5 flex justify-between content-center">
                     <h2 className="font-medium text-base">{props.name}</h2>
-                    <StatusTag status={props.status}/>
+                    <StatusTag status={props.status} colors={colors}/>
                 </div>
                 <h3>Talla: {props.size}</h3>
                 <h4>${props.price}</h4>

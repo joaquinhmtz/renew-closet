@@ -31,14 +31,14 @@ const PublicHeader = () => {
             <nav className={`w-full fixed top-0 z-20 transition-all ${!top && `bg-white shadow-lg`} h-20 py-5 px-10 flex place-items-center justify-between text-primary-black`}>
                 <div className="flex place-items-center">
                     <button onClick={() => setNav(!nav)} className="z-35">
-                        <Icon key={"faBars"} name={"faBars"} styleClass={"lg:hidden"}/>
+                        <Icon key={"faBars"} name={"faBars"} styleClass={"lg:hidden"} size={"xl"}/>
                     </button>
                     <span className="text-2xl font-semibold invisible lg:visible">Renew-Closet</span>
                 </div>
                 <div className="flex space-x-8">
                     {icons.map(iconObj => 
                         <Link to={iconObj.path} key={iconObj.icon}>
-                            <Icon name={iconObj.icon} styleClass={""}/>
+                            <Icon name={iconObj.icon} styleClass={""} size={"xl"}/>
                         </Link>
                     )}
                 </div>
@@ -58,18 +58,18 @@ const PublicHeader = () => {
             >
                 <div className="w-full h-20 py-5 px-6 flex flex-col justify-start">
                     <button onClick={() => setNav(!nav)} className="z-35 self-start py-3">
-                        <Icon key={"faXmark"} name={"faXmark"} styleClass={"lg:hidden"}/>
+                        <Icon key={"faXmark"} name={"faXmark"} styleClass={"lg:hidden"} size={"xl"}/>
                     </button>
                     <nav>
                         <ul className="flex flex-col pt-4 text-gray-800">
                             <li className="w-full px-4 py-4 flex place-items-center hover:bg-gray-100 focus:ring-blue-300 hover:rounded-md hover:font-medium cursor-pointer">
                                 <Link to="/">
-                                    <Icon name={"faHouse"} styleClass={"pr-2"}/> Home
+                                    <Icon name={"faHouse"} styleClass={"pr-2"} size={"xl"}/> Home
                                 </Link>
                             </li>
                             <li className="w-full px-4 py-4 flex place-items-center hover:bg-gray-100 hover:rounded-md hover:font-medium cursor-pointer">
                                 <Link to="/">
-                                    <Icon name={"faHouse"} styleClass={"pr-2"}/> About
+                                    <Icon name={"faHouse"} styleClass={"pr-2"} size={"xl"}/> About
                                 </Link>
                             </li>
                         </ul>

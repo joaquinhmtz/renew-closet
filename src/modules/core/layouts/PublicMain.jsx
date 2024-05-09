@@ -8,7 +8,6 @@ const PublicMain = () => {
         <> 
             <main className="h-screen">
                 <PublicHeader />
-                <div className="mt-20">Soy el public main</div>
 
                 <Outlet />
 

@@ -1,7 +1,9 @@
 const PublicFooter = () => {
     return (
         <>
-            <div>Soy el public footer</div>
+            <div className="w-full flex justify-center content-center py-5 px-10 bg-white drop-shadow-2xl mt-10">
+                <p className="font-medium">Renew-closet@2024</p>
+            </div>
         </>
     )
 }

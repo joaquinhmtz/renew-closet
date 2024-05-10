@@ -26,8 +26,8 @@ const ProductCard = ({ props }) => {
                     <h2 className="font-medium text-base">{props.name}</h2>
                     <StatusTag status={props.status} colors={colors}/>
                 </div>
-                <h3 className="text-secondary-gray text-base font-light">Talla: {props.size}</h3>
-                <h4 className="font-medium text-base">${props.price}</h4>
+                <h3 className="text-secondary-gray text-base font-light pt-0.5">Talla: {props.size}</h3>
+                <h4 className="font-medium text-base pt-0.5">${props.price}</h4>
             </div>
         </>
     )

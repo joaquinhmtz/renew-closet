@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 /** Public Main Layout and Components **/
 import PublicMain from "../layouts/PublicMain";
@@ -19,7 +19,9 @@ const RoutesMain = () => {
                 <Route index element={<HomeLayout />}/>
                 <Route path="mi-cuenta" element={<AccountLayout />} />
                 <Route path="bolsa" element={<BagLayout />} />
-                <Route path="*" element={<PublicMain />} />
+                <Route element={
+                    <Navigate to='/' />
+                } />
             </Route>
             {/* Private Routes */}
             <Route exact path="/app" element={<PrivateMain />}>

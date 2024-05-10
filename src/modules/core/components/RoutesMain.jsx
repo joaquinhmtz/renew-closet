@@ -19,10 +19,12 @@ const RoutesMain = () => {
                 <Route index element={<HomeLayout />}/>
                 <Route path="mi-cuenta" element={<AccountLayout />} />
                 <Route path="bolsa" element={<BagLayout />} />
+                <Route path="*" element={<PublicMain />} />
             </Route>
             {/* Private Routes */}
             <Route path="/app" element={<PrivateMain />}>
                 <Route index element={<LoginLayout />} />
+                <Route path="*" element={<PrivateMain />} />
             </Route>
         </Routes>
     )

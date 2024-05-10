@@ -16,7 +16,7 @@ const LoginLayout = () => {
                                 <input type="password" name="" id="passLogin" className="py-3 p-5 rounded-md  bg-zinc-50 md:w-[500px] w-[300px] outline-indigo-400" placeholder="Ej. *******" />
                             </div>
 
-                            <div class="flex justify-end mt-3 mb-4">
+                            <div className="flex justify-end mt-3 mb-4">
                                 <a href="#" className="text-blue-700 text-sm">¿Olvidaste tu password?</a>
                             </div>
 

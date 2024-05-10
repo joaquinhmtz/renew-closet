@@ -4,7 +4,7 @@ import Icon from "../../shared/components/Icon"
 
 const icons = [{
     icon:"faCircleUser",
-    path:"/"
+    path:"/mi-cuenta"
 }, {
     icon:"faHeart",
     path: "/",

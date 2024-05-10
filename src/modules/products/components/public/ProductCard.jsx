@@ -17,7 +17,7 @@ const ProductCard = ({ props }) => {
         <>
             <div className="w-full flex flex-col mt-12">
                 <div className="w-full min-h-80 bg-gray-400">
-                    <img className="w-full h-full object-cover" src={imgProduct} alt="profile-picture" />
+                    <img className="max-w-full h-full object-cover" src={imgProduct} alt="profile-picture" />
                 </div>
                 {props.status === "separate" ? 
                     <p className="font-light italic text-secondary-gray text-sm/[10px] leading-normal pt-1.5">El producto puede volver a estar disponible en caso de que no se realice la compra</p> 

@@ -19,7 +19,10 @@ const ProductCard = ({ props }) => {
                 <div className="w-full min-h-80 bg-gray-400">
                     <img className="w-full h-full object-cover" src={imgProduct} alt="profile-picture" />
                 </div>
-                <div className="mt-5 flex justify-between content-center">
+                {props.status === "separate" ? 
+                    <p className="font-light italic text-secondary-gray text-sm/[10px] leading-normal pt-1.5">El producto puede volver a estar disponible en caso de que no se realice la compra</p> 
+                : null}
+                <div className={`flex justify-between content-center ${props.status === "separate" ? 'mt-2' : 'mt-5'}`}>
                     <h2 className="font-medium text-base">{props.name}</h2>
                     <StatusTag status={props.status} colors={colors}/>
                 </div>

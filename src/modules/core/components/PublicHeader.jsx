@@ -28,7 +28,7 @@ const PublicHeader = () => {
 
     return (
         <>
-            <nav className={`w-full fixed top-0 z-20 transition-all ${!top && `bg-white shadow-lg`} h-20 py-5 px-10 flex place-items-center justify-between text-primary-black`}>
+            <nav className={`w-full fixed top-0 z-20 transition-all ${!top && `bg-white shadow-lg`} h-20 py-5 px-10 flex place-items-center justify-between`}>
                 <div className="flex place-items-center">
                     <button onClick={() => setNav(!nav)} className="z-35">
                         <Icon key={"faBars"} name={"faBars"} styleClass={"lg:hidden"} size={"xl"}/>

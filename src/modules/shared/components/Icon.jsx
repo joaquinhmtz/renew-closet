@@ -12,7 +12,7 @@ const Icon = ({ name, styleClass, size }) => {
     if (name === "faCircle" ? name = faCircle : null);
 
     return (
-        <FontAwesomeIcon className={`text-primary-black ${styleClass} hover:text-neutral-400 cursor-pointer active:scale-110`} icon={name} size={size} />
+        <FontAwesomeIcon className={`${styleClass} hover:text-neutral-400 cursor-pointer active:scale-110`} icon={name} size={size} />
     )
 }
 

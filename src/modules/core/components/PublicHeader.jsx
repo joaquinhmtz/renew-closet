@@ -7,7 +7,7 @@ const icons = [{
     path:"/mi-cuenta"
 }, {
     icon:"faHeart",
-    path: "/",
+    path: "/app",
 }, {
     icon:"faBagShopping",
     path: "/bolsa"

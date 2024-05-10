@@ -31,6 +31,10 @@ img {
   background-color: var(--colorPrimaryBlack);
 }
 
+.border-primary-all {
+  border: 1px solid var(--colorHoverGray);;
+}
+
 .text-secondary-gray {
   color: var(--colorGray);
 }

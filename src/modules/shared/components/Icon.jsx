@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCircleUser ,faHeart, faBagShopping, faBars, faXmark, faCircle, faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faCircleUser ,faHeart, faBagShopping, faBars, faXmark, faCircle, faMagnifyingGlass, faHouse } from "@fortawesome/free-solid-svg-icons";
 
 const Icon = ({ name, styleClass, size }) => {
 
@@ -10,6 +10,7 @@ const Icon = ({ name, styleClass, size }) => {
     if (name === "faXmark" ? name = faXmark : null);
     if (name === "faHouse" ? name = faHouse : null);
     if (name === "faCircle" ? name = faCircle : null);
+    if (name === "faMagnifyingGlass" ? name = faMagnifyingGlass : null);
 
     return (
         <FontAwesomeIcon className={`${styleClass} hover:text-neutral-400 cursor-pointer active:scale-110`} icon={name} size={size} />

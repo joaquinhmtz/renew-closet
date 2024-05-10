@@ -3,9 +3,13 @@ import { Outlet } from "react-router-dom"
 const PrivateMain = () => {
     return (
         <>
-            <div>Soy el private main</div>
+            <main className="h-screen">
+                {/* <PublicHeader /> */}
 
-            <Outlet />
+                <Outlet />
+
+                {/* <PublicFooter /> */}
+            </main>
         </>
     )
 }

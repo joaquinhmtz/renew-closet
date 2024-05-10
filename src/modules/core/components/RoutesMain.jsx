@@ -8,6 +8,7 @@ import BagLayout from "../layouts/public/BagLayout";
 
 /** Private Main Layout and Components **/
 import PrivateMain from "../layouts/PrivateMain";
+import LoginLayout from "../layouts/private/LoginLayout";
 
 const RoutesMain = () => {
     
@@ -20,8 +21,8 @@ const RoutesMain = () => {
                 <Route path="bolsa" element={<BagLayout />} />
             </Route>
             {/* Private Routes */}
-            <Route path="/app">
-                <Route index element={<PrivateMain />} />
+            <Route path="/app" element={<PrivateMain />}>
+                <Route index element={<LoginLayout />} />
             </Route>
         </Routes>
     )

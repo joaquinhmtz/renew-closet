@@ -27,6 +27,10 @@ img {
   color: var(--colorPrimaryBlack);
 }
 
+.bg-primary-black {
+  background-color: var(--colorPrimaryBlack);
+}
+
 .text-secondary-gray {
   color: var(--colorGray);
 }

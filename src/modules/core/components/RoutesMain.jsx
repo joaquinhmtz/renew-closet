@@ -5,6 +5,8 @@ import PublicMain from "../layouts/PublicMain";
 import HomeLayout from "../layouts/public/HomeLayout";
 import AccountLayout from "../layouts/public/AccountLayout";
 import BagLayout from "../layouts/public/BagLayout";
+import OrderLayout from "../layouts/public/OrderLayout";
+import RefundLayout from "../layouts/public/RefundLayout";
 
 /** Private Main Layout and Components **/
 import PrivateMain from "../layouts/PrivateMain";
@@ -17,7 +19,10 @@ const RoutesMain = () => {
             {/* Public Routes */}
             <Route exact path="/" element={<PublicMain />}>
                 <Route index element={<HomeLayout />}/>
-                <Route path="mi-cuenta" element={<AccountLayout />} />
+                <Route path="/cuenta" element={<AccountLayout />}>
+                    <Route path="pedidos" element={<OrderLayout />} />
+                    <Route path="devoluciones" element={<RefundLayout />} />
+                </Route>
                 <Route path="bolsa" element={<BagLayout />} />
                 <Route element={
                     <Navigate to='/' />

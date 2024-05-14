@@ -63,13 +63,8 @@ const PublicHeader = () => {
                     <nav>
                         <ul className="flex flex-col pt-4 text-gray-800">
                             <li className="w-full px-4 py-4 flex place-items-center hover:bg-gray-100 focus:ring-blue-300 hover:rounded-md hover:font-medium cursor-pointer">
-                                <Link to="/">
-                                    <Icon name={"faHouse"} styleClass={"pr-2"} size={"xl"}/> Home
-                                </Link>
-                            </li>
-                            <li className="w-full px-4 py-4 flex place-items-center hover:bg-gray-100 hover:rounded-md hover:font-medium cursor-pointer">
-                                <Link to="/">
-                                    <Icon name={"faHouse"} styleClass={"pr-2"} size={"xl"}/> About
+                                <Link to="/" onClick={() => setNav(!nav)}>
+                                    <Icon name={"faStore"} styleClass={"pr-2"} size={"xl"}/> Inicio
                                 </Link>
                             </li>
                         </ul>

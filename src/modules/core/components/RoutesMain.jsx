@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 /** Public Main Layout and Components **/
 import PublicMain from "../layouts/PublicMain";
 import HomeLayout from "../layouts/public/HomeLayout";
+import DetailProduct from "../layouts/public/DetailProduct";
 import AccountLayout from "../layouts/public/AccountLayout";
 import BagLayout from "../layouts/public/BagLayout";
 import OrderLayout from "../layouts/public/OrderLayout";
@@ -19,6 +20,7 @@ const RoutesMain = () => {
             {/* Public Routes */}
             <Route exact path="/" element={<PublicMain />}>
                 <Route index element={<HomeLayout />}/>
+                <Route path="/product/:id" element={<DetailProduct />}/>
                 <Route path="/cuenta" element={<AccountLayout />}>
                     <Route path="pedidos" element={<OrderLayout />} />
                     <Route path="devoluciones" element={<RefundLayout />} />

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import StatusTag from "../../../shared/components/StatusTag";
 import imgProduct from "./../../../../assets/t-shirt.png";
 
@@ -16,18 +17,20 @@ const ProductCard = ({ props }) => {
     return (
         <>
             <div className="w-full flex flex-col mt-12">
-                <div className="w-full min-h-80 bg-gray-400">
-                    <img className="w-full h-full object-cover" src={imgProduct} alt="profile-picture" />
-                </div>
-                {props.status === "separate" ? 
-                    <p className="font-light italic text-secondary-gray text-sm/[10px] leading-normal pt-1.5">El producto puede volver a estar disponible en caso de que no se realice la compra</p> 
-                : null}
-                <div className={`flex justify-between content-center ${props.status === "separate" ? 'mt-2' : 'mt-5'}`}>
-                    <h2 className="font-medium text-base text-primary-black">{props.name}</h2>
-                    <StatusTag status={props.status} colors={colors}/>
-                </div>
-                <h3 className="text-secondary-gray text-base font-light pt-0.5">Talla: {props.size}</h3>
-                <h4 className="text-primary-black font-medium text-base pt-0.5">${props.price}</h4>
+                <Link to={`/product/${props._id}`}>
+                    <div className="w-full flex min-h-96 bg-gray-400">
+                        <img className="w-full object-cover" src={imgProduct} alt="profile-picture" />
+                    </div>
+                    {props.status === "separate" ? 
+                        <p className="font-light italic text-secondary-gray text-sm/[10px] leading-normal pt-1.5">El producto puede volver a estar disponible en caso de que no se realice la compra</p> 
+                    : null}
+                    <div className={`flex justify-between content-center ${props.status === "separate" ? 'mt-2' : 'mt-5'}`}>
+                        <h2 className="font-medium text-base text-primary-black">{props.name}</h2>
+                        <StatusTag status={props.status} colors={colors}/>
+                    </div>
+                    <h3 className="text-secondary-gray text-base font-light pt-0.5">Talla: {props.size}</h3>
+                    <h4 className="text-primary-black font-medium text-base pt-0.5">${props.price}</h4>
+                </Link>
             </div>
         </>
     )

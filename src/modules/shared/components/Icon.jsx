@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { 
-    faCircleUser ,faHeart, faBagShopping, faBars, faXmark, faCircle, faMagnifyingGlass, faArrowRotateLeft, faChevronLeft, faStore
+    faCircleUser ,faHeart, faBagShopping, faBars, faXmark, faCircle, 
+    faMagnifyingGlass, faArrowRotateLeft, faChevronLeft, faStore
 } from "@fortawesome/free-solid-svg-icons";
 
 const Icon = ({ name, styleClass, size }) => {

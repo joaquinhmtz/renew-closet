@@ -35,10 +35,10 @@ const DetailProduct = () => {
 
                         <div className="w-full flex flex-col justify-center items-center mt-32 lg:mt-52">
                             <button className="bg-primary-black w-[300px] h-[55px] text-slate-50 rounded-md hover:bg-[#172023] active:scale-105">
-                                Añadir a la bolsa
+                                Añadir <Icon name={"faBagShopping"} styleClass={"ml-2"} size={"md"} />
                             </button>
                             <p className="pt-2">ó</p>
-                            <Link to="/" className="underline text-sky-600 hover:text-sky-700">
+                            <Link to="/" className="underline text-sm text-sky-600 hover:text-sky-700">
                                 Seguir comprando
                             </Link>
                         </div>

@@ -20,7 +20,7 @@
 }
 
 img {
-  aspect-ratio: 16/9;
+  /* aspect-ratio: 16/9; */
 }
 
 .text-primary-black {
@@ -81,6 +81,13 @@ img {
 
 .text-grand-blue {
   color: var(--colorGrandBlue);
+}
+
+.slider > * {
+  /* --column-offset: 20px;
+  flex: 0 0 calc(75% - var(--column-offset));
+  margin: 0 12px 0 0;
+  padding: 0px; */
 }
 
 /* :root {

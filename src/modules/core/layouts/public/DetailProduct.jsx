@@ -34,7 +34,7 @@ const DetailProduct = () => {
                         <p className="text-2xl font-medium pt-16">${product.price}</p>
 
                         <div className="w-full flex flex-col justify-center items-center mt-32 lg:mt-52">
-                            <button className="bg-primary-black w-[300px] h-[55px] text-slate-50 rounded-md hover:bg-[#172023] active:scale-105">
+                            <button className="inline-block transition duration-200 ease-in-out bg-primary-black w-[300px] h-[55px] text-slate-50 rounded-md hover:bg-[#172023] active:scale-105">
                                 Añadir <Icon name={"faBagShopping"} styleClass={"ml-2"} size={"sm"} />
                             </button>
                             <p className="pt-2">ó</p>
@@ -43,6 +43,35 @@ const DetailProduct = () => {
                             </Link>
                         </div>
                     </div>
+                </section>
+                <h2 className="font-bold text-2xl text-primary-black">También podrían gustarte</h2>
+                <section className="w-full mb-20 mt-10">
+                    <ul className="slider gap-10 flex overflow-y-auto">
+                        <li>
+                            <figure>
+                                <div>
+                                    <img src={imgProduct} alt="" />
+                                </div>
+                                <div>description</div>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <div>
+                                    <img src={imgProduct} alt="" />
+                                </div>
+                                <div>description</div>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <div>
+                                    <img src={imgProduct} alt="" />
+                                </div>
+                                <div>description</div>
+                            </figure>
+                        </li>
+                    </ul>
                 </section>
             </div>
         </>

@@ -7,7 +7,7 @@ const icons = [{
     path:"/cuenta"
 }, {
     icon:"faHeart",
-    path: "/",
+    path: "/favoritos",
 }, {
     icon:"faBagShopping",
     path: "/bolsa"
@@ -33,7 +33,9 @@ const PublicHeader = () => {
                     <button onClick={() => setNav(!nav)} className="z-35">
                         <Icon key={"faBars"} name={"faBars"} styleClass={"lg:hidden"} size={"xl"}/>
                     </button>
-                    <span className="text-2xl font-semibold invisible lg:visible">Renew-Closet</span>
+                    <Link to="/">
+                        <span className="text-2xl font-semibold invisible lg:visible">Renew-Closet</span>
+                    </Link>
                 </div>
                 <div className="flex space-x-8">
                     {icons.map(iconObj => 

@@ -8,6 +8,7 @@ import AccountLayout from "../layouts/public/AccountLayout";
 import BagLayout from "../layouts/public/BagLayout";
 import OrderLayout from "../layouts/public/OrderLayout";
 import RefundLayout from "../layouts/public/RefundLayout";
+import FavoriteLayout from "../layouts/public/FavoriteLayout";
 
 /** Private Main Layout and Components **/
 import PrivateMain from "../layouts/PrivateMain";
@@ -26,6 +27,7 @@ const RoutesMain = () => {
                     <Route path="devoluciones" element={<RefundLayout />} />
                 </Route>
                 <Route path="bolsa" element={<BagLayout />} />
+                <Route path="favoritos" element={<FavoriteLayout />} />
                 <Route element={
                     <Navigate to='/' />
                 } />

@@ -46,27 +46,35 @@ const DetailProduct = () => {
                 </section>
                 <h2 className="font-bold text-2xl text-primary-black">También podrían gustarte</h2>
                 <section className="w-full mb-20 mt-10">
-                    <ul className="slider gap-10 flex overflow-y-auto">
-                        <li>
+                    <ul className="gap-3 flex overflow-y-auto">
+                        <li className="slider slider-opt md:md-slider-opt xl:lg-slider-opt"> 
                             <figure>
-                                <div>
-                                    <img src={imgProduct} alt="" />
+                                <div className="w-full flex min-h-96 bg-gray-400">
+                                    <img className="w-full object-cover" src={imgProduct} alt="profile-picture" />
                                 </div>
                                 <div>description</div>
                             </figure>
                         </li>
-                        <li>
-                            <figure>
-                                <div>
-                                    <img src={imgProduct} alt="" />
+                        <li className="slider slider-opt md:md-slider-opt xl:lg-slider-opt">
+                            <figure >
+                                <div className="w-full flex min-h-96 bg-gray-400">
+                                    <img className="w-full object-cover" src={imgProduct} alt="profile-picture" />
                                 </div>
                                 <div>description</div>
                             </figure>
                         </li>
-                        <li>
-                            <figure>
-                                <div>
-                                    <img src={imgProduct} alt="" />
+                        <li className="slider slider-opt md:md-slider-opt xl:lg-slider-opt">
+                            <figure >
+                                <div className="w-full flex min-h-96 bg-gray-400">
+                                    <img className="w-full object-cover" src={imgProduct} alt="profile-picture" />
+                                </div>
+                                <div>description</div>
+                            </figure>
+                        </li>
+                        <li className="slider slider-opt md:md-slider-opt xl:lg-slider-opt">
+                            <figure >
+                                <div className="w-full flex min-h-96 bg-gray-400">
+                                    <img className="w-full object-cover" src={imgProduct} alt="profile-picture" />
                                 </div>
                                 <div>description</div>
                             </figure>

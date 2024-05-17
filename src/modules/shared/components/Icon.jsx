@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { 
     faCircleUser ,faHeart, faBagShopping, faBars, faXmark, faCircle, 
-    faMagnifyingGlass, faArrowRotateLeft, faChevronLeft, faStore
+    faMagnifyingGlass, faArrowRotateLeft, faChevronLeft, faStore, faQrcode
 } from "@fortawesome/free-solid-svg-icons";
 
 const Icon = ({ name, styleClass, size }) => {
@@ -16,6 +16,7 @@ const Icon = ({ name, styleClass, size }) => {
     if (name === "faMagnifyingGlass" ? name = faMagnifyingGlass : null);
     if (name === "faArrowRotateLeft" ? name = faArrowRotateLeft : null);
     if (name === "faChevronLeft" ? name = faChevronLeft : null);
+    if (name === "faQrcode" ? name = faQrcode : null);
 
     return (
         <FontAwesomeIcon className={`${styleClass} hover:text-neutral-400 cursor-pointer active:scale-110`} icon={name} size={size} />

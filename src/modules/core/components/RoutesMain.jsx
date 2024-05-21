@@ -13,6 +13,9 @@ import FavoriteLayout from "../layouts/public/FavoriteLayout";
 /** Private Main Layout and Components **/
 import PrivateMain from "../layouts/PrivateMain";
 import LoginLayout from "../layouts/private/LoginLayout";
+import AppLayout from "../layouts/private/AppLayout";
+import OrderListLayout from "../layouts/private/OrderListLayout";
+import RefundListLayout from "../layouts/private/RefundListLayout";
 
 const RoutesMain = () => {
     
@@ -33,9 +36,12 @@ const RoutesMain = () => {
                 } />
             </Route>
             {/* Private Routes */}
-            <Route exact path="/app" element={<PrivateMain />}>
+            <Route exact path="/login" element={<PrivateMain />}>
                 <Route index element={<LoginLayout />} />
-                <Route path="*" element={<PrivateMain />} />
+            </Route>
+            <Route exact path="/app" element={<PrivateMain />}>
+                <Route path="orders" element={<OrderListLayout />} /> 
+                <Route path="refunds" element={<RefundListLayout />} /> 
             </Route>
         </Routes>
     )

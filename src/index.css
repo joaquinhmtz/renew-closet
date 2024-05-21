@@ -120,6 +120,16 @@ img {
     margin: 0 20px 0 0;
     flex: 0 0 calc(75% - var(--column-offset));
   }
+
+  /* Private Custom Styles */
+  .link:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px var(--colorPrimaryBlack);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+  .link:hover:after { transform: scaleX(1); }
 }
 
 

@@ -5,6 +5,7 @@
 :root {
   /* Variables */
   /* --colorPrimaryBlack: #020617; */
+  --colorBackgroundMain: #f0f3f6;
   --colorPrimaryBlack: #020617;
   --colorGray: #6B7280;
   --colorHoverGray: #EFF2F4;
@@ -83,6 +84,10 @@ img {
   color: var(--colorGrandBlue);
 }
 
+.bg-main {
+  background-color: var(--colorBackgroundMain);
+}
+
 /* .slider > * {
   --column-offset: 20px;
   flex: 0 0 calc(75% - var(--column-offset));
@@ -130,6 +135,13 @@ img {
     transition: transform 250ms ease-in-out;
   }
   .link:hover:after { transform: scaleX(1); }
+
+}
+
+@layer components {
+  .order-open {
+    @apply text-green bg-baby-green rounded-md px-3 py-1 text-xs tracking-wider
+  }
 }
 
 

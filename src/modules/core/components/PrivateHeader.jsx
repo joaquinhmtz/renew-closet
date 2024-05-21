@@ -38,17 +38,13 @@ const PrivateHeader = () => {
                 </div>
                 <div className="flex justify-center invisible lg:visible py-5">
                     <ul className="w-full flex justify-between">
-                        <li>
-                            <Link to="orders" className="link">
-                                Órdenes
-                            </Link>
-                        </li>
-                        <li><Link to="refunds" className="link">
-                                devolcuiones
-                            </Link></li>
-                        <li><Link className="link">
-                                productos
-                            </Link></li>
+                        {menu.map(item => 
+                            <li key={item.name}>
+                                <Link to={item.href} className="link font-medium">
+                                    {item.name}
+                                </Link>
+                            </li>
+                        )}
                     </ul>
                 </div>
                 <div className="flex justify-end items-center py-5 basis-1/3">

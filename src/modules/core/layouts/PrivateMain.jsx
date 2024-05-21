@@ -5,7 +5,7 @@ const PrivateMain = () => {
 
     return (
         <>
-            <main className="h-screen">
+            <main className="h-screen bg-main">
                 <PrivateHeader />
 
                 <Outlet />

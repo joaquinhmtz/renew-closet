@@ -1,5 +1,31 @@
 import OrderCard from "../../../orders/components/OrderCard"
 
+const orders = [{
+    folio: "O-20240521001",
+    total: 300,
+    date: "21/05/2024",
+    hours: "12:55",
+    client: "Hugo Ruiz",
+    status: "open",
+    statusClass: "order-open"
+},{
+    folio: "O-20240521002",
+    total: 150,
+    date: "21/05/2024",
+    hours: "14:06",
+    client: "Samanta Hernandez",
+    status: "cancelled",
+    statusClass: "order-open"
+},{
+    folio: "O-20240521003",
+    total: 400,
+    date: "21/05/2024",
+    hours: "18:20",
+    client: "Anahí Fernandez",
+    status: "ready",
+    statusClass: "order-open"
+}];
+
 const OrderListLayout = () => {
     return (
         <>
@@ -7,9 +33,9 @@ const OrderListLayout = () => {
                 <h2 className="font-bold text-2xl text-primary-black">Órdenes [80]</h2>
 
                 <div className="w-full mt-5 grid gap-5 grid-col-1 md:grid-cols-2 lg:grid-cols-3">
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
+                    {orders.map(item =>
+                        <OrderCard key={item.folio} props={item} />
+                    )}
                 </div>
             </div>
         </>

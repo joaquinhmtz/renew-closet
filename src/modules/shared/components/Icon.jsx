@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { 
     faCircleUser ,faHeart, faBagShopping, faBars, faXmark, faCircle, 
-    faMagnifyingGlass, faArrowRotateLeft, faChevronLeft, faStore, faQrcode, faTrash
+    faMagnifyingGlass, faArrowRotateLeft, faChevronLeft, faStore, faQrcode, faTrash,
+    faCircleXmark, faTriangleExclamation
 } from "@fortawesome/free-solid-svg-icons";
 
 const Icon = ({ name, styleClass, size }) => {
@@ -18,6 +19,8 @@ const Icon = ({ name, styleClass, size }) => {
     if (name === "faChevronLeft" ? name = faChevronLeft : null);
     if (name === "faQrcode" ? name = faQrcode : null);
     if (name === "faTrash" ? name = faTrash : null);
+    if (name === "faCircleXmark" ? name = faCircleXmark : null);
+    if (name === "faTriangleExclamation" ? name = faTriangleExclamation : null);
 
     return (
         <FontAwesomeIcon className={`${styleClass} hover:text-neutral-400 cursor-pointer active:scale-110`} icon={name} size={size} />

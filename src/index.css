@@ -139,8 +139,21 @@ img {
 }
 
 @layer components {
-  .order-open {
-    @apply text-green bg-baby-green rounded-md px-3 py-1 text-xs tracking-wider
+
+  .order {
+    @apply rounded-md px-3 py-1 text-xs tracking-wider
+  }
+
+  .open {
+    @apply text-green bg-baby-green
+  }
+
+  .cancelled {
+    @apply text-red-500 bg-red-200
+  }
+
+  .ready {
+    @apply text-blue bg-baby-blue
   }
 }
 

@@ -24,6 +24,14 @@ const orders = [{
     client: "Anahí Fernandez",
     status: "ready",
     statusClass: "order-open"
+},{
+    folio: "O-20240521004",
+    total: 400,
+    date: "21/05/2024",
+    hours: "22:20",
+    client: "Anahí Fernandez",
+    status: "close",
+    statusClass: "order-open"
 }];
 
 const OrderListLayout = () => {

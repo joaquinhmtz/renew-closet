@@ -17,7 +17,7 @@ const OrderCard = ({ props }) => {
                         <hr className="mt-3 mb-4" />
                         <div className="text-sm font-medium text-primary-black tracking-wide pb-2">{props.client}</div>
                         <div className="flex items-center">
-                            <Icon name={"faCircleXmark"} styleClass={"mr-2 text-secondary-gray"} size={"sm"}></Icon>
+                            <Icon name={"faCircleXmark"} styleClass={"mr-2 text-green"} size={"sm"}></Icon>
                             <span className="text-sm font-normal text-secondary-gray tracking-wide">Pagado</span>
                         </div>
                         <div className="flex items-center">

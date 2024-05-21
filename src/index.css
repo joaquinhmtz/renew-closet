@@ -88,6 +88,10 @@ img {
   background-color: var(--colorBackgroundMain);
 }
 
+.bg-baby-black {
+  background-color: #d5d5d5;
+}
+
 /* .slider > * {
   --column-offset: 20px;
   flex: 0 0 calc(75% - var(--column-offset));
@@ -154,6 +158,10 @@ img {
 
   .ready {
     @apply text-blue bg-baby-blue
+  }
+
+  .close {
+    @apply text-primary-black bg-baby-black
   }
 }
 

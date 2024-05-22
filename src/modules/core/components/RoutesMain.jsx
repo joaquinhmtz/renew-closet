@@ -17,6 +17,7 @@ import AppLayout from "../layouts/private/AppLayout";
 import OrderListLayout from "../layouts/private/OrderListLayout";
 import RefundListLayout from "../layouts/private/RefundListLayout";
 import OrderDetail from "../../orders/components/OrderDetail";
+import ProductListLayout from "../layouts/private/ProductListLayout";
 
 const RoutesMain = () => {
     
@@ -44,6 +45,7 @@ const RoutesMain = () => {
                 <Route path="orders" element={<OrderListLayout />} /> 
                 <Route path="order/:id" element={<OrderDetail />}/>
                 <Route path="refunds" element={<RefundListLayout />} /> 
+                <Route path="products" element={<ProductListLayout />} /> 
             </Route>
         </Routes>
     )

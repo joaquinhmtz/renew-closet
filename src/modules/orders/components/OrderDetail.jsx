@@ -37,7 +37,7 @@ const OrderDetail = () => {
                             </div>
                         </div>
 
-                        <div className="w-full flex flex-col justify-center items-center mt-32 lg:mt-20">
+                        <div className="w-full flex flex-col px-5 justify-center items-center mt-32 lg:mt-20">
                             <button className="inline-block transition duration-200 ease-in-out bg-primary-black w-[300px] h-[55px] text-slate-50 rounded-md hover:bg-[#172023] active:scale-105">
                                 Listo para entregar <Icon name={"faTruck"} styleClass={"ml-2"} size={"sm"} />
                             </button>

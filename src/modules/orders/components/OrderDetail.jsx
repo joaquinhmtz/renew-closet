@@ -52,7 +52,7 @@ const OrderDetail = () => {
                     <div className="border border-gray-200 rounded-md bg-white w-full basis-full lg:basis-2/3">
                         <div className="w-full flex items-center">
                             <h3 className="text-xl font-medium text-baby-black pt-5 px-5">Órden: O-202405120001</h3>
-                            <span className={`order open mt-5`}>Abierta</span>
+                            <span className={`order open mt-5 mr-5`}>Abierta</span>
                         </div>
                         <span className="text-sm font-normal text-secondary-gray tracking-wide pb-2 pl-5 mb-3">Pedido por: </span>
                         <span className="text-sm font-medium text-secondary-gray tracking-wide pb-2 mb-3">Samanta Sanchez</span>

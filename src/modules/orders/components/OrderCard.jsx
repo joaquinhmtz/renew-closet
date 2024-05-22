@@ -5,7 +5,7 @@ const OrderCard = ({ props }) => {
 
     return (
         <>
-            <Link to="/app/orders">
+            <Link to={`/app/order/${props.id}`}>
                 <div className="border border-gray-200 p-5 rounded-md bg-white hover:shadow-md active:scale-105">
                     
                     <div className="">

@@ -5,6 +5,7 @@
 :root {
   /* Variables */
   /* --colorPrimaryBlack: #020617; */
+  --colorBabyBlack: #474F68;
   --colorBackgroundMain: #f0f3f6;
   --colorPrimaryBlack: #020617;
   --colorGray: #6B7280;
@@ -22,6 +23,10 @@
 
 img {
   /* aspect-ratio: 16/9; */
+}
+
+.text-baby-black {
+  color: var(--colorBabyBlack)
 }
 
 .text-primary-black {

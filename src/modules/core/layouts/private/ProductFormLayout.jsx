@@ -14,7 +14,7 @@ const ProductFormLayout = () => {
   const videoConstraints = {
     width: 390,
     height: 390,
-    facingMode: "user",
+    facingMode: "FACING_MODE_ENVIRONMENT",
   };
 
     return (

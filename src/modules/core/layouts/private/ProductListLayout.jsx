@@ -5,7 +5,7 @@ const products = [{id:1},{id:2},{id:3},{id:4},{id:5},{id:6}];
 
 const ProductListLayout = () => {
 
-    const [headerInfo, setHeaderInfo] = useState({ title: "Productos", total: 80, filters: true, new: true, newUrl: "/app/products/new" });
+    const [headerInfo, setHeaderInfo] = useState({ title: "Productos", total: 80, filters: true, new: true, newUrl: "/app/products-new" });
 
     const [pimpFilters, setPimpFilters] = useState(false);
     const PimpFilters = (filterBand) => setPimpFilters(filterBand);

@@ -1,6 +1,20 @@
-const products = [{},{},{},{},{},{}];
+import { useCallback, useState } from "react";
+import ImageViewer from 'react-simple-image-viewer';
+const products = [{id:1},{id:2},{id:3},{id:4},{id:5},{id:6}];
 
 const ProductListLayout = () => {
+
+    const [currentImage, setCurrentImage] = useState(0);
+    const [isViewerOpen, setIsViewerOpen] = useState(false);
+    const openImageViewer = useCallback((index) => {
+        setCurrentImage(index);
+        setIsViewerOpen(true);
+    }, []);
+    const closeImageViewer = () => {
+        setCurrentImage(0);
+        setIsViewerOpen(false);
+    };
+
     return (
         <>
             <div className="mt-20 px-6 pt-8 pb-4 lg:px-10">
@@ -32,11 +46,11 @@ const ProductListLayout = () => {
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
                             {products.map(item => 
-                                <tr>
+                                <tr key={item.id}>
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <div className="flex items-center">
                                             <div className="flex-shrink-0 h-20 w-20">
-                                                <img className="h-20 w-20 rounded-md" src="https://i.pravatar.cc/150?img=1" alt="" />
+                                                <img key={ item.id } className="h-20 w-20 rounded-md" src="https://i.pravatar.cc/150?img=1" alt="" onClick={ () => openImageViewer(item.id) } />
                                             </div>
                                             <div className="ml-4">
                                                 <div className="text-sm font-medium text-gray-900">
@@ -71,126 +85,21 @@ const ProductListLayout = () => {
                                     </td>
                                 </tr>
                             )}
-                           
-
-
-                            {/* <tr>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    <div className="flex items-center">
-                                        <div className="flex-shrink-0 h-10 w-10">
-                                            <img className="h-10 w-10 rounded-full" src="https://i.pravatar.cc/150?img=1" alt="" />
-                                        </div>
-                                        <div className="ml-4">
-                                            <div className="text-sm font-medium text-gray-900">
-                                                Jane Cooper
-                                            </div>
-                                            <div className="text-sm text-gray-500">
-                                                jane.cooper@example.com
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    <div className="text-sm text-gray-900">Regional Paradigm Technician</div>
-                                    <div className="text-sm text-gray-500">Optimization</div>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                        Active
-                                    </span>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    Admin
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    jane.cooper@example.com
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                                    <a href="#" className="text-indigo-600 hover:text-indigo-900">Edit</a>
-                                    <a href="#" className="ml-2 text-red-600 hover:text-red-900">Delete</a>
-                                </td>
-                            </tr>
-
-
-
-                            <tr>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    <div className="flex items-center">
-                                        <div className="flex-shrink-0 h-10 w-10">
-                                            <img className="h-10 w-10 rounded-full" src="https://i.pravatar.cc/150?img=1" alt="" />
-                                        </div>
-                                        <div className="ml-4">
-                                            <div className="text-sm font-medium text-gray-900">
-                                                Jane Cooper
-                                            </div>
-                                            <div className="text-sm text-gray-500">
-                                                jane.cooper@example.com
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    <div className="text-sm text-gray-900">Regional Paradigm Technician</div>
-                                    <div className="text-sm text-gray-500">Optimization</div>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                        Active
-                                    </span>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    Admin
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    jane.cooper@example.com
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                                    <a href="#" className="text-indigo-600 hover:text-indigo-900">Edit</a>
-                                    <a href="#" className="ml-2 text-red-600 hover:text-red-900">Delete</a>
-                                </td>
-                            </tr>
-
-
-
-                            <tr>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    <div className="flex items-center">
-                                        <div className="flex-shrink-0 h-10 w-10">
-                                            <img className="h-10 w-10 rounded-full" src="https://i.pravatar.cc/150?img=1" alt="" />
-                                        </div>
-                                        <div className="ml-4">
-                                            <div className="text-sm font-medium text-gray-900">
-                                                Jane Cooper
-                                            </div>
-                                            <div className="text-sm text-gray-500">
-                                                jane.cooper@example.com
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    <div className="text-sm text-gray-900">Regional Paradigm Technician</div>
-                                    <div className="text-sm text-gray-500">Optimization</div>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                        Active
-                                    </span>
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    Admin
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    jane.cooper@example.com
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap  text-sm font-medium">
-                                    <a href="#" className="text-indigo-600 hover:text-indigo-900">Edit</a>
-                                    <a href="#" className="ml-2 text-red-600 hover:text-red-900">Delete</a>
-                                </td>
-                            </tr> */}
-
                         </tbody>
                     </table>
+                    {/*settear y poner el path de la imagen*/}
+                    {isViewerOpen && (
+                        <ImageViewer
+                        src={ ["https://i.pravatar.cc/150?img=1"] }
+                        currentIndex={ 0 }
+                        disableScroll={ false }
+                        backgroundStyle={{
+                            backgroundColor: "rgba(0,0,0,0.8)"
+                        }}
+                        closeOnClickOutside={ true }
+                        onClose={ closeImageViewer }
+                        />
+                    )}
                 </div>
             </div>
         </>

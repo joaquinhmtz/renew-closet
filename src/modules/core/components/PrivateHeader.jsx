@@ -27,7 +27,7 @@ const PrivateHeader = () => {
 
     return (
         <>
-            <nav className={`w-full fixed top-0 z-20 transition-all bg-white shadow h-18 px-6 lg:px-10 grid grid-cols-3 items-center justify-between`}>
+            <nav className={`w-full fixed top-0 transition-all bg-white shadow h-18 px-6 lg:px-10 grid grid-cols-3 items-center justify-between`}>
                 <div className="flex place-items-center py-5">
                     <button onClick={() => setNav(!nav)} className="z-35">
                         <Icon key={"faBars"} name={"faBars"} styleClass={"lg:hidden"} size={"xl"}/>

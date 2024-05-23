@@ -40,7 +40,7 @@ const PublicHeader = () => {
                 <div className="flex space-x-8">
                     {icons.map(iconObj => 
                         <Link to={iconObj.path} key={iconObj.icon}>
-                            <Icon name={iconObj.icon} styleClass={""} size={"xl"}/>
+                            <Icon name={iconObj.icon} styleClass={"hover:text-neutral-400"} size={"xl"}/>
                         </Link>
                     )}
                 </div>

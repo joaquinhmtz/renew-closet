@@ -30,7 +30,7 @@ const ProductFormLayout = () => {
             height={500}
             width={500}
             ref={webcamRef}
-            mirrored={true}
+            mirrored={false}
           />
           <button onClick={capture}>Capture photo</button>
         </>

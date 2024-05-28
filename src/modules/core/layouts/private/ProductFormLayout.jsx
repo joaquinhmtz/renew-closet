@@ -1,15 +1,25 @@
 import { useForm, useController } from "react-hook-form"
+import { useState } from "react";
 import Select from "react-select";
+import Icon from "../../../shared/components/Icon";
 import { catSizes, catBrands } from "../../../shared/catalogs/catalogs";
 
 const ProductFormLayout = () => {
-
-    const { register, formState: { errors }, watch, handleSubmit, control } = useForm();
+    
+    const [image, setImage] = useState(null);
+    const { register, setValue, formState: { errors }, watch, handleSubmit, control } = useForm();
     const { field: { value: langValue, onChange: langOnChange, ...restLangField } } = useController({ name: 'size', control, rules: { required: true } });
     const { field: { value: langValue2, onChange: langOnChange2, ...restLangField2 } } = useController({ name: 'brand', control, rules: { required: true } });
 
     const onSubmit = (data) => {
-        console.log("form submit: ", data, catSizes);
+        console.log("form submit: ", data);
+    }
+
+    const onImageChange = (event) => {
+        if (event.target.files && event.target.files[0]) {
+            setValue("coverPhoto", event.target.files[0]);
+            setImage(URL.createObjectURL(event.target.files[0]));
+        }
     }
 
     return (
@@ -19,6 +29,37 @@ const ProductFormLayout = () => {
                     <h2 className="font-bold text-2xl py-4 px-8 text-baby-black">Nuevo producto</h2>
                     <hr />
                     <form onSubmit={handleSubmit(onSubmit)} className="px-8 py-4">
+                        <div className="mb-4 flex flex-col">
+                            <div className="col-span-full flex flex-col justify-center items-center">
+                                <label htmlFor="cover-photo" className="mb-2 text-baby-black">
+                                    Cover photo
+                                </label>
+                                {image === null && <div className="mt-2 w-40 h-40 flex justify-center items-center rounded-full border border-dashed border-gray-900/25 px-6 py-10">
+                                    <div className="text-center">
+                                        <Icon name={"faImage"} styleClass={"text-gray-300"} size={"2xl"} />
+                                    </div>
+                                </div>}
+                                {image !== null && <div className="mt-2 w-40 h-40 flex justify-center items-center rounded-full border border-dashed border-gray-900/25">
+                                    <img className="w-full object-cover rounded-full" alt="Cover photo" src={image}/>
+                                </div>}
+                                <div className="mt-4 flex text-sm leading-6 text-gray-600">
+                                    <label
+                                    htmlFor="file-upload"
+                                    className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-400 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-400 focus-within:ring-offset-2 hover:text-indigo-400"
+                                    >
+                                    <span>Subir archivo</span>
+                                    <input id="file-upload" name="file-upload" type="file" className="sr-only"
+                                    onChange={onImageChange}  />
+                                    </label>
+                                </div>
+                            </div>
+                            <p className="text-xs text-center leading-5 text-gray-600">PNG, JPG, GIF up to 10MB</p>
+                            {errors.coverPhoto?.type === "required" &&
+                                <small className="text-sm mt-2 text-red-400" >
+                                    * La image principal es requerida
+                                </small>
+                            }
+                        </div>
                         <div className="mb-4 flex flex-col">
                             <label className="mb-2 text-baby-black" htmlFor="nameItem">Producto:</label>
                             <input type="text" name="nameItem" id="nameItem" className="py-3 p-5 rounded-md  bg-zinc-50 outline-indigo-400" placeholder="Ej. T-Shirt manga corta" 

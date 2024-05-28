@@ -3,7 +3,7 @@ import {
     faCircleUser ,faHeart, faBagShopping, faBars, faXmark, faCircle, 
     faMagnifyingGlass, faArrowRotateLeft, faChevronLeft, faStore, faQrcode, faTrash,
     faCircleXmark, faTriangleExclamation, faTruck, faCircleCheck, faArrowLeftLong,
-    faFilter, faPlus
+    faFilter, faPlus, faImage
 } from "@fortawesome/free-solid-svg-icons";
 
 const Icon = ({ name, styleClass, size }) => {
@@ -27,6 +27,7 @@ const Icon = ({ name, styleClass, size }) => {
     if (name === "faArrowLeftLong" ? name = faArrowLeftLong : null);
     if (name === "faFilter" ? name = faFilter : null);
     if (name === "faPlus" ? name = faPlus : null);
+    if (name === "faImage" ? name = faImage : null);
 
     return (
         <FontAwesomeIcon className={`${styleClass} cursor-pointer active:scale-110`} icon={name} size={size} />

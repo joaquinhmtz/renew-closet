@@ -6,3 +6,9 @@ export let catSizes = [
     { value: "xlg", label: "XL" },
     { value: "xxlg", label: "2XL" },
 ]
+
+export let catBrands = [
+    { value: "tommy", label: "Tommy Hilfiger" },
+    { value: "zara", label: "Zara" },
+    { value: "bershka", label: "Bershka" },
+]
